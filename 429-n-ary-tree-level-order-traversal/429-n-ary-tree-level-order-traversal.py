@@ -20,10 +20,7 @@ class Solution:
             res.append(temp)
             k=[]
             for i in queue:
-                for j in i.children:
-                    k.append(j)
-           
-                        
+                k.extend(i.children)
             level_ord(k)
         level_ord([root])
         return res
