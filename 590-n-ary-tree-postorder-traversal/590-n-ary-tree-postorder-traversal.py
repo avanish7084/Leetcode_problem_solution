@@ -12,10 +12,11 @@ class Solution:
         def postorder(root):
             if root is None:
                 return
-            
-            if root.children!=None:
-                for i in root.children:
+            for i in root.children:
                     postorder(i)
+            # if root.children!=None:
+            #     for i in root.children:
+            #         postorder(i)
             res.append(root.val)
         postorder(root)
         return res
