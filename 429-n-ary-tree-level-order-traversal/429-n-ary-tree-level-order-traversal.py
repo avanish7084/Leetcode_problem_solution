@@ -21,8 +21,8 @@ class Solution:
             k=[]
             for i in queue:
                 for j in i.children:
-                    if j!=None:
-                        k.append(j)
+                    k.append(j)
+           
                         
             level_ord(k)
         level_ord([root])
