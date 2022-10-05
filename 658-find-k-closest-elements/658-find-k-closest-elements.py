@@ -1,15 +1,14 @@
 class Solution:
     def findClosestElements(self, arr: List[int], k: int, x: int) -> List[int]:
-        
-        ans=[]
+        d=[]
         for i in arr:
-            ans.append([i,abs(x-i)])
-        
-        ans.sort(key=lambda x:x[1])
-        res=[]
-        
+            d.append([i,abs(x-i)])
+            
+        d.sort(key=lambda x:x[1])
+        ans=[]
         for i in range(k):
-            res.append(ans[i][0])
+            ans.append(d[i][0])
+        ans.sort()
+        return ans
+            
         
-        res.sort()
-        return res
