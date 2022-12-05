@@ -8,11 +8,9 @@ class Solution:
         
         slow=head
         fast=head
-        while fast!=None and fast.next!=None:
-            
-            fast=fast.next.next
+        while fast and fast.next:
             slow=slow.next
-             
+            fast=fast.next.next
         return slow
         
         # temp=head
