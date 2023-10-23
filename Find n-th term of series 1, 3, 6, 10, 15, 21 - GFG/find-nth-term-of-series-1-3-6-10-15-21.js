@@ -51,11 +51,17 @@ function main() {
 
 class Solution {
     findNthTerm(N){
-       
-       let sum=0;
-       for(let i=1;i<N+1;i++){
-           sum=sum+i
-       }
-       return sum
+     
+    //   let sum=0;
+    //   for(let i=1;i<N+1;i++){
+    //       sum=sum+i
+    //   }
+    //   return sum
+    let n=N
+    let c=1
+    c=n*(n+1)
+    c=c/2
+    
+    return c
     }
 }
